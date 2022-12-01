@@ -14,15 +14,12 @@ html, body {
   display: flex;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
-  height: 100%;
   justify-content: center;
   margin: 0;
   padding: 0;
 }
 
-.midle{
-    text-align: center;
-}
+
 #qustions{
     padding-left: 10px;
     text-align: center;
@@ -36,10 +33,11 @@ html, body {
     padding-left: 10px;
     display: table;
     font-size: 14px;
+    
 }
 .cttc .container{
     align-items: center;
-    margin: 0 auto;
+    
 }
 
 form {
@@ -122,14 +120,15 @@ input[type="submit"]:active {
 .rate {
     float: left;
     height: 46px;
-    padding: 0 10px;
+    padding: 0;
     align-self: center;
 }
 .rate:not(:checked) > input {
     position:absolute;
-    top:-9999px;
+    top:-999px;
 }
 .rate:not(:checked) > label {
+
     float:right;
     width:1em;
     overflow:hidden;
@@ -140,7 +139,7 @@ input[type="submit"]:active {
 }
 
 .rate:not(:checked) > label:before {
-    content: '★ ';
+    content: '★';
 }
 .rate > input:checked ~ label {
     color: #ffc700;    
@@ -159,11 +158,17 @@ input[type="submit"]:active {
 
 </style>
 <body> 
-        <div>
-            
-     </div>
-     </div>
+        
         <form action="https://script.google.com/macros/s/AKfycbybptMHl-hF38XducNENVaRuH3nYJi76HF7WdfD6vRttqfyXte_TFewggdHgH9DY7RPmg/exec" class="row" method="POST">
+        	<div>
+            <center>
+        <div class="cttc">
+        <h2>MSME TOOL ROOM</h2>
+       <h3>Central Tool & Training Centre</h3>
+       <h3>Bhubaneswar-751024, Odisha</h3>
+       <h2>LEARING SERVICE FEEDBACK REPORT</h2>
+        </center>
+     </div>
                 <div class="column">
                     <label for="name">Name</label>
                     <input type="text" name="Name" id="name" placeholder="Your name here" required>
