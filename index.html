@@ -9,14 +9,14 @@
     
 html, body {
   align-items: center;
+  display: inline-block;
   background: #f2f4f8;
   border: 0;
   display: flex;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   justify-content: center;
-  margin: 0;
-  padding: 0;
+  
 }
 
 
@@ -29,12 +29,7 @@ html, body {
     margin: auto;
     font-size: 14px;
 }
-.cttc{
-    padding-left: 10px;
-    display: table;
-    font-size: 14px;
-    
-}
+
 .cttc .container{
     align-items: center;
     
@@ -118,14 +113,13 @@ input[type="submit"]:active {
 }
 
 .rate {
-    float: left;
-    height: 46px;
-    padding: 0;
-    align-self: center;
+    display: flex;
+flex-direction: row-reverse;
+justify-content: center;
+
 }
 .rate:not(:checked) > input {
-    position:absolute;
-    top:-999px;
+    display:none;
 }
 .rate:not(:checked) > label {
 
@@ -159,12 +153,12 @@ input[type="submit"]:active {
 </style>
 <body> 
         
-        <form action="https://script.google.com/macros/s/AKfycbybptMHl-hF38XducNENVaRuH3nYJi76HF7WdfD6vRttqfyXte_TFewggdHgH9DY7RPmg/exec" class="row" method="POST">
-        	<div>
+        <form action="https://script.google.com/macros/s/AKfycbz6b7szeTMrjaFj4lIbW_sRZxc40ieu9xv1oVGv0RbNwjIxOoOfTNhD_tiJcZynsbbskg/exec" class="row" method="POST">
+            <div>
             <center>
         <div class="cttc">
         <h2>MSME TOOL ROOM</h2>
-       <h3>Central Tool & Training Centre</h3>
+       <h3>Central Tool Room & Training Centre</h3>
        <h3>Bhubaneswar-751024, Odisha</h3>
        <h2>LEARING SERVICE FEEDBACK REPORT</h2>
         </center>
