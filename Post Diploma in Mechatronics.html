@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTTC BBSR Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<style type="text/css">
+    
+html, body {
+  align-items: center;
+  display: inline-block;
+  background: #f2f4f8;
+  border: 0;
+  display: flex;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  justify-content: center;
+  
+}
+
+
+#qustions{
+    padding-left: 10px;
+    text-align: center;
+    display: table;
+    clear: both;
+    position: relative;
+    margin: auto;
+    font-size: 14px;
+}
+
+.cttc .container{
+    align-items: center;
+    
+}
+
+form {
+  --background: white;
+  --border: rgba(0, 0, 0, 0.125);
+  --borderDark: rgba(0, 0, 0, 0.25);
+  --borderDarker: rgba(0, 0, 0, 0.5);
+  --bgColorH: 0;
+  --bgColorS: 0%;
+  --bgColorL: 98%;
+  --fgColorH: 210;
+  --fgColorS: 50%;
+  --fgColorL: 38%;
+  --shadeDark: 0.3;
+  --shadeLight: 0.7;
+  --shadeNormal: 0.5;
+  --borderRadius: 0.125rem;
+  --highlight: #306090;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--borderRadius);
+  box-shadow: 0 1rem 1rem -0.75rem var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+textarea,
+input{
+    width: 100%;
+    font-weight: 400;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1.2px solid #c4cae0;
+    margin-top: 5px;
+}
+textarea{
+    resize: none;
+}
+textarea:focus,
+#input:focus{
+    outline: none;
+    border-color: #6f6df4;
+}
+
+input[type="submit"] {
+  color: hsl(var(--bgColorH), var(--bgColorS), var(--bgColorL));
+  background: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-top: 0.625rem;
+  order: 4;
+  outline: 1px dashed transparent;
+  outline-offset: 2px;
+  padding-left: 0;
+  text-transform: uppercase;
+}
+
+input[type="checkbox"]:focus + label span::before,
+input[type="submit"]:focus {
+  outline: 1px dashed hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
+  outline-offset: 2px;
+}
+
+input[type="submit"]:focus {
+  background: hsl(var(--fgColorH), var(--fgColorS), calc(var(--fgColorL) * 0.85));
+}
+
+input[type="submit"]:hover {
+  background: hsl(var(--fgColorH), var(--fgColorS), calc(var(--fgColorL) * 0.85));
+}
+
+input[type="submit"]:active {
+  background: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
+  transition: all 0.125s;
+}
+
+.rate {
+    display: flex;
+flex-direction: row-reverse;
+justify-content: center;
+
+}
+.rate:not(:checked) > input {
+    display:none;
+}
+.rate:not(:checked) > label {
+
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+
+.rate:not(:checked) > label:before {
+    content: '★';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+</style>
+<body> 
+        
+        <form action="https://script.google.com/macros/s/AKfycbz6b7szeTMrjaFj4lIbW_sRZxc40ieu9xv1oVGv0RbNwjIxOoOfTNhD_tiJcZynsbbskg/exec" class="row" method="POST" (ngSubmit)="onSubmit(userForm.value)" onsubmit="return myFunction();">
+            <div>
+            <center>
+        <div class="cttc">
+        <h2>MSME TOOL ROOM</h2>
+       <h3>Central Tool Room & Training Centre</h3>
+       <h3>Bhubaneswar-751024, Odisha</h3>
+       <h2>LEARING SERVICE FEEDBACK REPORT</h2>
+        </center>
+     </div>
+                <div class="column">
+                    <label for="name">Name</label>
+                    <input type="text" name="Name" id="name" placeholder="Your name here" required>
+                </div>
+                 <br>
+                <div class="column">
+                    <label for="email">Email</label>
+                    <input type="email" name="Email" id="email" placeholder="Your email here" required>
+                </div>
+                 <br>
+                <div class="column">
+                    <label for="subject">Subject</label>
+                </br>
+                    <select style="margin-top: 10px; height: 30px; width: 100%;" name="languages" id="lang" required>
+                        <option name="Subject" value="Click here to select">Click here to select</option>
+                        <option name="Subject" value="SAP Business One">SAP Business One</option>
+                        <option name="Subject" value="CREO PARAMETRIC">CREO PARAMETRIC</option>
+                        <option name="Subject" value="Master CAM">Master CAM</option>
+                        <option name="Subject" value="Unigraphics">Unigraphics</option>
+                        <option name="Subject" value="CATIA">CATIA</option>
+                        <option name="Subject" value="VLSI">VLSI</option>
+                        <option name="Subject" value="PLC Programming">PLC Programming</option>
+                        <option name="Subject" value="Embedded System">Embedded System</option>
+                        <option name="Subject" value="MATLAB">MATLAB</option>
+                        <option name="Subject" value="STAAD Pro">STAAD Pro</option>
+                        <option name="Subject" value="ANSYS">ANSYS</option>
+                        <option name="Subject" value="Electrical CAD">Electrical CAD</option>
+                        <option name="Subject" value="SCADA">SCADA</option>
+                        <option name="Subject" value="JAVA">JAVA</option>
+                        <option name="Subject" value="Computer Hardware & Networking">Computer Hardware & Networking</option>
+                        <option name="Subject" value="Solidworks">Solidworks</option>
+                        <option name="Subject" value="3DS Max">3DS Max</option>
+                        <option name="Subject" value="CNC Programming on Lathe">CNC Programming on Lathe</option>
+                        <option name="Subject" value="CNC Machining on Lathe">CNC Machining on Lathe</option>
+                        <option name="Subject" value="CNC Programming on Milling">CNC Programming on Milling</option>
+                        <option name="Subject" value="CNC Machining on Milling">CNC Machining on Milling</option>
+                        <option name="Subject" value="3D Printing">3D Printing</option>
+                        <option name="Subject" value="Revit Architecture">Revit Architecture</option>
+                        <option name="Subject" value="Power Electronics Lab">Power Electronics Lab</option>
+                        <option name="Subject" value="Hydraulic & Pneumaticm">Hydraulic & Pneumatic</option>
+
+                        <option name="Subject" value="Total Station and DGPS">Total Station and DGPS</option>
+                        <option name="Subject" value="Lab View">Lab View</option>
+                        <option name="Subject" value="Personality Development Communication Skills(PDCS)">Personality Development Communication Skills(PDCS)</option>
+                        <option name="Subject" value="C, C++ Programming">C, C++ Programming</option>
+                        <option name="Subject" value="Entrepreneurship Development Program (EDP)">Entrepreneurship Development Program (EDP)</option>
+                        <option name="Subject" value="Industrial Robotics">Industrial Robotics</option>
+                        <option name="Subject" value="Internet of Things (IOT)">Internet of Things (IOT)</option>
+                        <option name="Subject" value="Electrical Machining Lab Practice">Electrical Machining Lab Practice</option>
+                        <option name="Subject" value="Electronics Machining Lab Practices">Electronics Machining Lab Practices</option>
+                        <option name="Subject" value="Server Administration">Server Administration</option>
+                        <option name="Subject" value="Advance Networking">Advance Networking</option>
+                        <option name="Subject" value="Electronics Machining Lab">Electronics Machining Lab</option>
+                        <option name="Subject" value="CNC Turning & Milling">CNC Turning & Milling</option>
+                        <option name="Subject" value="Artificial Intelligence and Machine Learning">Artificial Intelligence and Machine Learning</option>
+                        <option name="Subject" value="Solar.P.V.Technology">Solar.P.V.Technology</option>
+                        <option name="Subject" value="Survey & Material Testing Lab">Survey & Material Testing Lab</option>
+                        <option name="Subject" value="Python Programming">Python Programming</option>
+                        <option name="Subject" value="Cloud Computing">Cloud Computing</option>
+                        <option name="Subject" value="JAVA Framework">JAVA Framework</option>
+                        <option name="Subject" value="DATA Analytics">DATA Analytics</option>
+                        <option name="Subject" value="TRAINING OF TRAINERS">TRAINING OF TRAINERS</option>
+                        <option name="Subject" value="Mechatronics">Mechatronics</option>
+                        <option name="Subject" value="Process Contrl & Automation">Process Contrl & Automation</option>
+                        <option name="Subject" value="Integrated CAD/CAM">Integrated CAD/CAM</option>
+
+                    </select>
+                </div required>
+                 <br>
+                <div class="column">
+                    <label for="subject">Subject Code</label>
+                    <input type="text" name="Subject" id="subject" placeholder="Your subject here" required>
+                </div>
+                 <br>
+                <div class="column">
+                    <label for="contact">Contact Number</label>
+                    <input type="tel" name="Contact Number" id="contact" placeholder="Your phone number here" required>
+                </div>
+                 <br>
+                <div class="column">
+                    <label for="subject">Venue</label>
+                    <input type="text" name="Venue" id="venue" placeholder="Your venue here" required>
+                </div>
+                 <br>
+                <div class="column">
+                    <label for="subject">Course</label>
+                    <input type="text" name="Course" id="venue" placeholder="Your course here" required>
+                </div>
+                 <br>
+                <div class="column">
+                    <label for="subject">Name of the Faculty</label>
+                    </br>
+                    <select style="margin-top: 10px; height: 30px; width: 100%;" name="languages" id="lang" required>
+                        <option name="Name of the Faculty" value="Click here to select">Click here to select</option>
+                        <option name="Name of the Faculty" value="979- MRUTUNJAY MISHRA">979- MRUTUNJAY MISHRA</option>
+                        <option name="Name of the Faculty" value="116- SATYABRATA PANDAB">116- SATYABRATA PANDAB</option>
+                        <option name="Name of the Faculty" value="122- PRANAB KUMAR CHOWDHURY">122- PRANAB KUMAR CHOWDHURY</option>
+                        <option name="Name of the Faculty" value="1254- PUSPITA SARANGI ">1254- PUSPITA SARANGI </option>
+                        <option name="Name of the Faculty" value="687- SUDESNA DALEI">687- SUDESNA DALEI</option>
+                        <option name="Name of the Faculty" value="1244- ALOK DAS">1244- ALOK DAS</option>
+                        <option name="Name of the Faculty" value="763- PRATYUSH RANJAN MISHRA">763- PRATYUSH RANJAN MISHRA</option>
+                        <option name="Name of the Faculty" value="1346- MEGHA MAYURI TRIPATHY">1346- MEGHA MAYURI TRIPATHY </option>
+                        <option name="Name of the Faculty" value="1313- RUTUPARNA BISWAL">1313- RUTUPARNA BISWAL</option>
+                        <option name="Name of the Faculty" value="942- SHRUTIRANI BEHERA">942- SHRUTIRANI BEHERA</option>
+                        <option name="Name of the Faculty" value="1401- PRITIPRAJUKTA JENA">1401- PRITIPRAJUKTA JENA </option>
+                        <option name="Name of the Faculty" value="1133- AMRIT KUJUR">1133- AMRIT KUJUR</option>
+                        <option name="Name of the Faculty" value="1100- DEVI PRASAD SATAPATHY">1100- DEVI PRASAD SATAPATHY</option>
+                        <option name="Name of the Faculty" value="222- DEBADATTA BHATTACHARYA">222- DEBADATTA BHATTACHARYA </option>
+                        <option name="Name of the Faculty" value="881- NEELAM MAHARANA ">881- NEELAM MAHARANA </option>
+                        <option name="Name of the Faculty" value="1402- SWAYAMPRAVA MISHRA">1402- SWAYAMPRAVA MISHRA</option>
+                        <option name="Name of the Faculty" value="1400- SABISHESA PANDA1062- BIKASH KUMAR BEHERA ">1400- SABISHESA PANDA </option>
+                        <option name="Name of the Faculty" value="1062- BIKASH KUMAR BEHERA ">1062- BIKASH KUMAR BEHERA </option>
+                    </select> 
+                </div>
+                 <br>
+                <div class="column">
+                    <label for="contact">Timing</label>
+                    <input type="time" name="Timing" id="timing" placeholder="Your time here" required>
+                </div>
+                 <br>
+                <div class="column">
+                   <label>Course starting date</label>
+                   <input type="date" name="Course starting date" name="startingdate" id="startingdate" required>
+                </div>
+                 <br>
+                <div class="column">
+                   <label>Course ending date</label>
+                <input type="date" name="Course ending date" name="endingdate" id="endingdate" required>
+                </div>
+            </br>
+            <div class="" id="qustions">
+                
+                    <h3>Evolution Questionnaire</h3>
+                    <p>Rating on a scale of 10 stars</p>
+
+            </div>
+            <br><br></br>
+        
+            <div class="cttc">
+                <h3>1. How well the course was organized ?</h3>
+                <div class="rate" >
+                    <input type="radio" id="star10" name="rate1" value="10" required/><label for="star10" title="text">10 stars</label>
+                    <input type="radio" id="star9" name="rate1" value="9" required/><label for="star9" title="text">9 stars</label>
+                    <input type="radio" id="star8" name="rate1" value="8" required/><label for="star8" title="text">8 stars</label>
+                    <input type="radio" id="star7" name="rate1" value="7" required/><label for="star7" title="text">7 stars</label>
+                    <input type="radio" id="star6" name="rate1" value="6" required/><label for="star6" title="text">6 star</label>
+                    <input type="radio" id="star5" name="rate1" value="5" required/><label for="star5" title="text">5 stars</label>
+                    <input type="radio" id="star4" name="rate1" value="4" required/><label for="star4" title="text">4 stars</label>
+                    <input type="radio" id="star3" name="rate1" value="3" required/><label for="star3" title="text">3 stars</label>
+                    <input type="radio" id="star2" name="rate1" value="2" required/><label for="star2" title="text">2 stars</label>
+                    <input type="radio" id="star1" name="rate1" value="1" required/><label for="star1" title="text">1 star</label>
+                     </div>
+            </div>
+
+
+            <br>
+            <div class="cttc">
+                <h3>2. How confident do you feel about your grasp of this module content ?</h3>
+                <div class="rate">
+                    <input type="radio" id="star20" name="rate2" value="10" required/><label for="star20" title="text">10 stars</label>
+                    <input type="radio" id="star19" name="rate2" value="9" required/><label for="star19" title="text">9 stars</label>
+                    <input type="radio" id="star18" name="rate2" value="8" required/><label for="star18" title="text">8 stars</label>
+                    <input type="radio" id="star17" name="rate2" value="7" required/><label for="star17" title="text">7 stars</label>
+                    <input type="radio" id="star16" name="rate2" value="6" required/><label for="star16" title="text">6 star</label>
+                    <input type="radio" id="star15" name="rate2" value="5" required/><label for="star15" title="text">5 stars</label>
+                    <input type="radio" id="star14" name="rate2" value="4" required/><label for="star14" title="text">4 stars</label>
+                    <input type="radio" id="star13" name="rate2" value="3" required/><label for="star13" title="text">3 stars</label>
+                    <input type="radio" id="star12" name="rate2" value="2" required/><label for="star12" title="text">2 stars</label>
+                    <input type="radio" id="star11" name="rate2" value="1" required/><label for="star11" title="text">1 star</label>
+                     </div>
+            </div>
+
+
+
+            <br>
+            <div class="cttc">
+                <h3>3. How do you rate the leaning environment during your training ?</h3>
+                <div class="rate">
+                    <input type="radio" id="star30" name="rate3" value="10" required/><label for="star30" title="text">10 stars</label>
+                    <input type="radio" id="star29" name="rate3" value="9" required/><label for="star29" title="text">9 stars</label>
+                    <input type="radio" id="star28" name="rate3" value="8" required/><label for="star28" title="text">8 stars</label>
+                    <input type="radio" id="star27" name="rate3" value="7" required/><label for="star27" title="text">7 stars</label>
+                    <input type="radio" id="star26" name="rate3" value="6" required/><label for="star26" title="text">6 star</label>
+                    <input type="radio" id="star25" name="rate3" value="5" required/><label for="star25" title="text">5 stars</label>
+                    <input type="radio" id="star24" name="rate3" value="4" required/><label for="star24" title="text">4 stars</label>
+                    <input type="radio" id="star23" name="rate3" value="3" required/><label for="star23" title="text">3 stars</label>
+                    <input type="radio" id="star22" name="rate3" value="2" required/><label for="star22" title="text">2 stars</label>
+                    <input type="radio" id="star21" name="rate3" value="1" required/><label for="star21" title="text">1 star</label>
+                     </div>
+            </div>
+
+
+            <br>
+            <div class="cttc">
+                <h3>4. How satisfied you are by the training facility provided to you ?</h3>
+                <div class="rate">
+                    <input type="radio" id="star40" name="rate4" value="10" required/><label for="star40" title="text">10 stars</label>
+                    <input type="radio" id="star39" name="rate4" value="9" required/><label for="star39" title="text">9 stars</label>
+                    <input type="radio" id="star38" name="rate4" value="8" required/><label for="star38" title="text">8 stars</label>
+                    <input type="radio" id="star37" name="rate4" value="7" required/><label for="star37" title="text">7 stars</label>
+                    <input type="radio" id="star36" name="rate4" value="6" required/><label for="star36" title="text">6 star</label>
+                    <input type="radio" id="star35" name="rate4" value="5" required/><label for="star35" title="text">5 stars</label>
+                    <input type="radio" id="star34" name="rate4" value="4" required/><label for="star34" title="text">4 stars</label>
+                    <input type="radio" id="star33" name="rate4" value="3" required/><label for="star33" title="text">3 stars</label>
+                    <input type="radio" id="star32" name="rate4" value="2" required/><label for="star32" title="text">2 stars</label>
+                    <input type="radio" id="star31" name="rate4" value="1" required/><label for="star31" title="text">1 star</label>
+                     </div>
+            </div>
+
+
+            <br>
+            <div class="cttc">
+                <h3>5. How was the quality of study material provided to you ?</h3>
+                <div class="rate">
+                    <input type="radio" id="star50" name="rate5" value="10" required/><label for="star50" title="text">10 stars</label>
+                    <input type="radio" id="star49" name="rate5" value="9" required/><label for="star49" title="text">9 stars</label>
+                    <input type="radio" id="star48" name="rate5" value="8" required/><label for="star48" title="text">8 stars</label>
+                    <input type="radio" id="star47" name="rate5" value="7" required/><label for="star47" title="text">7 stars</label>
+                    <input type="radio" id="star46" name="rate5" value="6" required/><label for="star46" title="text">6 star</label>
+                    <input type="radio" id="star45" name="rate5" value="5" required/><label for="star45" title="text">5 stars</label>
+                    <input type="radio" id="star44" name="rate5" value="4" required/><label for="star44" title="text">4 stars</label>
+                    <input type="radio" id="star43" name="rate5" value="3" required/><label for="star43" title="text">3 stars</label>
+                    <input type="radio" id="star42" name="rate5" value="2" required/><label for="star42" title="text">2 stars</label>
+                    <input type="radio" id="star41" name="rate5" value="1" required/><label for="star41" title="text">1 star</label>
+                     </div>
+            </div>
+
+
+            <br>
+            <div class="cttc">
+                <h3>6. How effective do you find the faculty ?</h3>
+                <div class="rate">
+                    <input type="radio" id="star60" name="rate6" value="10" required/><label for="star60" title="text">10 stars</label>
+                    <input type="radio" id="star59" name="rate6" value="9" required/><label for="star59" title="text">9 stars</label>
+                    <input type="radio" id="star58" name="rate6" value="8" required/><label for="star58" title="text">8 stars</label>
+                    <input type="radio" id="star57" name="rate6" value="7" required/><label for="star57" title="text">7 stars</label>
+                    <input type="radio" id="star56" name="rate6" value="6" required/><label for="star56" title="text">6 star</label>
+                    <input type="radio" id="star55" name="rate6" value="5" required/><label for="star55" title="text">5 stars</label>
+                    <input type="radio" id="star54" name="rate6" value="4" required/><label for="star54" title="text">4 stars</label>
+                    <input type="radio" id="star53" name="rate6" value="3" required/><label for="star53" title="text">3 stars</label>
+                    <input type="radio" id="star52" name="rate6" value="2" required/><label for="star52" title="text">2 stars</label>
+                    <input type="radio" id="star51" name="rate6" value="1" required/><label for="star51" title="text">1 star</label>
+                     </div>
+            </div>
+
+
+            <br>
+            <div class="cttc">
+                <h3>7. How satisfactory did you find their answers to your queries ?</h3>
+                <div class="rate">
+                    <input type="radio" id="star70" name="rate7" value="10" required/><label for="star70" title="text">10 stars</label>
+                    <input type="radio" id="star69" name="rate7" value="9" required/><label for="star69" title="text">9 stars</label>
+                    <input type="radio" id="star68" name="rate7" value="8" required/><label for="star68" title="text">8 stars</label>
+                    <input type="radio" id="star67" name="rate7" value="7" required/><label for="star67" title="text">7 stars</label>
+                    <input type="radio" id="star66" name="rate7" value="6" required/><label for="star66" title="text">6 star</label>
+                    <input type="radio" id="star65" name="rate7" value="5" required/><label for="star65" title="text">5 stars</label>
+                    <input type="radio" id="star64" name="rate7" value="4" required/><label for="star64" title="text">4 stars</label>
+                    <input type="radio" id="star63" name="rate7" value="3" required/><label for="star63" title="text">3 stars</label>
+                    <input type="radio" id="star62" name="rate7" value="2" required/><label for="star62" title="text">2 stars</label>
+                    <input type="radio" id="star61" name="rate7" value="1" required/><label for="star61" title="text">1 star</label>
+                     </div>
+            </div>
+
+
+            <br>
+            <div class="cttc">
+                <h3>8. How through was their knowledge of course contents ?</h3>
+                <div class="rate">
+                    <input type="radio" id="star80" name="rate8" value="10" required/><label for="star80" title="text">10 stars</label>
+                    <input type="radio" id="star79" name="rate8" value="9" required/><label for="star79" title="text">9 stars</label>
+                    <input type="radio" id="star78" name="rate8" value="8" required/><label for="star78" title="text">8 stars</label>
+                    <input type="radio" id="star77" name="rate8" value="7" required/><label for="star77" title="text">7 stars</label>
+                    <input type="radio" id="star76" name="rate8" value="6" required/><label for="star76" title="text">6 star</label>
+                    <input type="radio" id="star75" name="rate8" value="5" required/><label for="star75" title="text">5 stars</label>
+                    <input type="radio" id="star74" name="rate8" value="4" required/><label for="star74" title="text">4 stars</label>
+                    <input type="radio" id="star73" name="rate8" value="3" required/><label for="star73" title="text">3 stars</label>
+                    <input type="radio" id="star72" name="rate8" value="2" required/><label for="star72" title="text">2 stars</label>
+                    <input type="radio" id="star71" name="rate8" value="1" required/><label for="star71" title="text">1 star</label>
+                     </div>
+            </div>
+
+
+            <br>
+            <div class="cttc">
+                <h3>9. How inspiring was your association with the faculty ?</h3>
+                <div class="rate">
+                    <input type="radio" id="star90" name="rate9" value="10" required/><label for="star90" title="text">10 stars</label>
+                    <input type="radio" id="star89" name="rate9" value="9" required/><label for="star89" title="text">9 stars</label>
+                    <input type="radio" id="star88" name="rate9" value="8" required/><label for="star88" title="text">8 stars</label>
+                    <input type="radio" id="star87" name="rate9" value="7" required/><label for="star87" title="text">7 stars</label>
+                    <input type="radio" id="star86" name="rate9" value="6" required/><label for="star86" title="text">6 star</label>
+                    <input type="radio" id="star85" name="rate9" value="5" required/><label for="star85" title="text">5 stars</label>
+                    <input type="radio" id="star84" name="rate9" value="4" required/><label for="star84" title="text">4 stars</label>
+                    <input type="radio" id="star83" name="rate9" value="3" required/><label for="star83" title="text">3 stars</label>
+                    <input type="radio" id="star82" name="rate9" value="2" required/><label for="star82" title="text">2 stars</label>
+                    <input type="radio" id="star81" name="rate9" value="1" required/><label for="star81" title="text">1 star</label>
+                     </div>
+            </div>
+
+
+            <br>
+            <div class="cttc">
+                <h3>10. How do you rate the assistance provided during your training</h3>
+                <div class="rate">
+                    <input type="radio" id="star100" name="rate10" value="10" required/><label for="star100" title="text">10 stars</label>
+                    <input type="radio" id="star99" name="rate10" value="9" required/><label for="star99" title="text">9 stars</label>
+                    <input type="radio" id="star98" name="rate10" value="8" required/><label for="star98" title="text">8 stars</label>
+                    <input type="radio" id="star97" name="rate10" value="7" required/><label for="star97" title="text">7 stars</label>
+                    <input type="radio" id="star96" name="rate10" value="6" required/><label for="star96" title="text">6 star</label>
+                    <input type="radio" id="star95" name="rate10" value="5" required/><label for="star95" title="text">5 stars</label>
+                    <input type="radio" id="star94" name="rate10" value="4" required/><label for="star94" title="text">4 stars</label>
+                    <input type="radio" id="star93" name="rate10" value="3" required/><label for="star93" title="text">3 stars</label>
+                    <input type="radio" id="star92" name="rate10" value="2" required/><label for="star92" title="text">2 stars</label>
+                    <input type="radio" id="star91" name="rate10" value="1" required/><label for="star91" title="text">1 star</label>
+                     </div>
+            </div>
+
+
+            <br>
+            <div class="cttc">
+                <h3>11. How effective was the consultation provided?</h3>
+                <div class="rate">
+                    <input type="radio" id="star110" name="rate11" value="10" required/><label for="star110" title="text">10 stars</label>
+                    <input type="radio" id="star109" name="rate11" value="9" required/><label for="star109" title="text">9 stars</label>
+                    <input type="radio" id="star108" name="rate11" value="8" required/><label for="star108" title="text">8 stars</label>
+                    <input type="radio" id="star107" name="rate11" value="7" required/><label for="star107" title="text">7 stars</label>
+                    <input type="radio" id="star106" name="rate11" value="6" required/><label for="star106" title="text">6 star</label>
+                    <input type="radio" id="star105" name="rate11" value="5" required/><label for="star105" title="text">5 stars</label>
+                    <input type="radio" id="star104" name="rate11" value="4" required/><label for="star104" title="text">4 stars</label>
+                    <input type="radio" id="star103" name="rate11" value="3" required/><label for="star103" title="text">3 stars</label>
+                    <input type="radio" id="star102" name="rate11" value="2" required/><label for="star102" title="text">2 stars</label>
+                    <input type="radio" id="star101" name="rate11" value="1" required/><label for="star101" title="text">1 star</label>
+                     </div>
+            </div>
+
+
+            <br>
+            <div class="cttc">
+                <h3>12. How well were the stated objectives of the module achieved?</h3>
+                <div class="rate">
+                    <input type="radio" id="star120" name="rate12" value="10" required/><label for="star120" title="text">10 stars</label>
+                    <input type="radio" id="star119" name="rate12" value="9" required/><label for="star119" title="text">9 stars</label>
+                    <input type="radio" id="star118" name="rate12" value="8" required/><label for="star118" title="text">8 stars</label>
+                    <input type="radio" id="star117" name="rate12" value="7" required/><label for="star117" title="text">7 stars</label>
+                    <input type="radio" id="star116" name="rate12" value="6" required/><label for="star116" title="text">6 star</label>
+                    <input type="radio" id="star115" name="rate12" value="5" required/><label for="star115" title="text">5 stars</label>
+                    <input type="radio" id="star114" name="rate12" value="4" required/><label for="star114" title="text">4 stars</label>
+                    <input type="radio" id="star113" name="rate12" value="3" required/><label for="star113" title="text">3 stars</label>
+                    <input type="radio" id="star112" name="rate12" value="2" required/><label for="star112" title="text">2 stars</label>
+                    <input type="radio" id="star111" name="rate12" value="1" required/><label for="star111" title="text">1 star</label>
+                     </div>
+            </div>
+            <br>
+
+
+            <div class="" id="qustions">
+                
+                    <h3>AMENITIES</h3>
+                    <p>Rating on a scale of 4 stars</p>
+
+            </div>
+            <br><br>
+        
+            <div class="">
+                <h3>1. Safety</h3>
+                <div class="" >
+                    <input type="radio" id="star124" name="rate13" value="Poor" required/><label for="star124" title="text">Poor</label>
+                    <input type="radio" id="star123" name="rate13" value="Satisfactory" required/><label for="star123" title="text">Satisfactory</label>
+                    <input type="radio" id="star122" name="rate13" value="Good" required/><label for="star122" title="text">Good</label>
+                    <input type="radio" id="star121" name="rate13" value="Very Good" required/><label for="star121" title="text">Very Good</label>
+                     </div>
+            </div>
+
+
+            <br>
+
+            <div class="">
+                <h3>2. Training Administration Response</h3>
+                <div class="" >
+                    <input type="radio" id="star128" name="rate14" value="Poor" required/><label for="star128" title="text">Poor</label>
+                    <input type="radio" id="star127" name="rate14" value="Satisfactory" required/><label for="star127" title="text">Satisfactory</label>
+                    <input type="radio" id="star126" name="rate14" value="Good" required/><label for="star126" title="text">Good</label>
+                    <input type="radio" id="star125" name="rate14" value="Very Good" required/><label for="star125" title="text">Very Good</label>
+                     </div>
+            </div>
+
+            <br>
+            
+            <div class="">
+                <h3>3. Cafeteria</h3>
+                <div class="" >
+                    <input type="radio" id="star132" name="rate15" value="Poor" required/><label for="star132" title="text">Poor</label>
+                    <input type="radio" id="star131" name="rate15" value="Satisfactory" required/><label for="star131" title="text">Satisfactory</label>
+                    <input type="radio" id="star130" name="rate15" value="Good" required/><label for="star130" title="text">Good</label>
+                    <input type="radio" id="star129" name="rate15" value="Very Good" required/><label for="star129" title="text">Very Good</label>
+                     </div>
+            </div>
+
+
+            <br>
+            
+            <div class="">
+                <h3>4. Sanitation</h3>
+                <div class="" >
+                    <input type="radio" id="star136" name="rate16" value="Poor" required/><label for="star136" title="text">Poor</label>
+                    <input type="radio" id="star135" name="rate16" value="Satisfactory" required/><label for="star135" title="text">Satisfactory</label>
+                    <input type="radio" id="star134" name="rate16" value="Good" required/><label for="star134" title="text">Good</label>
+                    <input type="radio" id="star133" name="rate16" value="Very Good" required/><label for="star133" title="text">Very Good</label>
+                     </div>
+            </div>
+             <br>
+
+            <div class="" id="qustions">
+                
+                    <h3>OTHERS</h3>
+            
+            </div>
+            <br><br></br>
+        
+            <div class="">
+                <h3>1. Whether duration of the course is</h3>
+                <div class="" >
+                    <input type="radio" id="star139" name="rate17" value="Too short" required/><label for="star139" title="text">Too short</label>
+                    <input type="radio" id="star138" name="rate17" value="Adequate" required/><label for="star138" title="text">Adequate</label>
+                    <input type="radio" id="star137" name="rate17" value="Too Long" required/><label for="star137" title="text">Too Long</label>
+            </div>
+
+
+            <br>
+
+            <div class="">
+                <h3>2. Course to be recommended</h3>
+                <div class="" >
+                    <input type="radio" id="star14" name="rate18" value="Yes" required/><label for="star141" title="text">Yes</label>
+                    <input type="radio" id="star141" name="rate18" value="No" required/><label for="star141" title="text">No</label>
+                     </div>
+            </div>
+            <br><br></br>
+
+            <div class="column">
+
+                    <b><label for="name">Comments</label></b>
+                    <h5>Ex. Any other like as Ass. faculties ,etc. </h5>
+                    <input type="text" name="Comments" id="Comments" placeholder="Your comments here">
+                </div>
+
+          <br><br></br>
+            <div>
+                <br><br>
+                <center>
+            <a href="https://www.w3schools.com"><input class="button" [disabled]="userForm.in" onclick="disabled" type="submit" value="Submit"></input></a>
+                </center>
+            </div>
+
+            <br><br></br>
+
+
+            <title>Document</title>
+<p> Time is <span name = "stamp" id="time"> </span></p>
+<script>
+    function hideButton(x){
+        x.style.display = 'index.html';
+        return false;
+    }
+`use strict`;
+function refreshTime() {
+  const timeDisplay = document.getElementById("time");
+  const dateString = new Date().toLocaleString();
+  const formattedString = dateString.replace(", ", " - ");
+  timeDisplay.textContent = formattedString;
+}
+  setInterval(refreshTime, 1000);
+
+
+      const btn = document.querySelector("button");
+      const post = document.querySelector(".post");
+      const widget = document.querySelector(".star-widget");
+      const editBtn = document.querySelector(".edit");
+      btn.onclick = ()=>{
+        widget.style.display = "none";
+        post.style.display = "block";
+        editBtn.onclick = ()=>{
+          widget.style.display = "block";
+          post.style.display = "none";
+        }
+        return false;
+      }
+</script>
+</form>
+</body>
+</html>
