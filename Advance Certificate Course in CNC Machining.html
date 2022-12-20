@@ -154,14 +154,14 @@ justify-content: center;
 </style>
 <body> 
         
-        <form  name="google-sheet" class="row" method="POST" (ngSubmit)="onSubmit(userForm.value)" onsubmit="return myFunction();">
+        <form onsubmit="myFunc();" name="google-sheet" class="row" method="POST" (ngSubmit)="onSubmit(userForm.value)" onsubmit="return myFunction();">
             <div>
             <center>
-        <div class="cttc">
+        <div class="cttc"><b>
         <h2>MSME TOOL ROOM</h2>
        <h3>Central Tool Room & Training Centre</h3>
        <h3>Bhubaneswar-751024, Odisha</h3>
-       <h2>LEARING SERVICE FEEDBACK REPORT</h2>
+       <h2>LEARING SERVICE FEEDBACK REPORT</h2></b>
         </center>
      </div>
                 <div class="column">
@@ -578,7 +578,7 @@ justify-content: center;
 
             <div class="" id="qustions">
                 
-                    <h3>OTHERS</h3>
+                  <b>  <h1>OTHERS</h1></b>
             
             </div>
             <br><br></br>
@@ -636,6 +636,9 @@ justify-content: center;
     function hideButton(x){
         x.style.display = 'index.html';
         return false;
+    }
+    function myFunc(){
+        event.preventDefault();
     }
 `use strict`;
 function refreshTime() {
