@@ -631,8 +631,9 @@ justify-content: center;
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("Thanks for your valuable feedback !!"))
-                .catch(error => console.error('Error!', error.message))
+                alert("Thank you for your feedback !!");
+                location.reload();
+
             })
     function hideButton(x){
         x.style.display = 'index.html';
