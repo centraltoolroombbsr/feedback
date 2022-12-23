@@ -180,7 +180,7 @@ justify-content: center;
                 </br>
                                         <select style="margin-top: 10px; height: 30px; width: 100%;" name="languages" id="lang" required>
                         <option value="" disabled selected hidden>Please Choose...</option>
-                        <option name="Subject" value="Communicative English">Communicative English</option>
+                        <option name="Subject" value="Engineering Drawing">Engineering Drawing</option>
                         <option name="Subject" value="Engineering Mathematics-1">Engineering Mathematics-1</option>
                         <option name="Subject" value="Engineering Physics">Engineering Physics</option>
                         <option name="Subject" value="Engineering Drawing-1">Engineering Drawing-1</option>
@@ -202,6 +202,9 @@ justify-content: center;
                         <option name="Subject" value="Mould Design">Mould Design</option>
                         <option name="Subject" value="Jigs & Fixture Theory">Jigs & Fixture Theory</option>
                         <option name="Subject" value="Strenath of Material">Strenath of Material</option>
+                        <option name="Subject" value="Engineering Metrology">Engineering Metrology</option>
+                        <option name="Subject" value="Soft Skill">Soft Skill</option>
+                        <option name="Subject" value="Industrial Management">Industrial Management</option>
 
                     </select>
                 </div required>
@@ -583,7 +586,7 @@ justify-content: center;
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                alert("Thank you for your feedback !!");
+                confirm("Are you sure !!");
                 location.reload();
 
             })
