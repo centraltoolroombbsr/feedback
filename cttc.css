@@ -1,0 +1,144 @@
+     
+html, body {
+  align-items: center;
+  display: inline-block;
+  background: #f2f4f8;
+  border: 0;
+  padding-left: 5px;
+  display: flex;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  justify-content: center;
+  
+}
+
+
+#qustions{
+    padding-left: 10px;
+    text-align: center;
+    display: table;
+    clear: both;
+    position: relative;
+    margin: auto;
+    font-size: 14px;
+}
+
+.cttc .container{
+    align-items: center;
+    
+}
+
+form {
+  --background: white;
+  --border: rgba(0, 0, 0, 0.125);
+  --borderDark: rgba(0, 0, 0, 0.25);
+  --borderDarker: rgba(0, 0, 0, 0.5);
+  --bgColorH: 0;
+  --bgColorS: 0%;
+  --bgColorL: 98%;
+  --fgColorH: 210;
+  --fgColorS: 50%;
+  --fgColorL: 38%;
+  --shadeDark: 0.3;
+  --shadeLight: 0.7;
+  --shadeNormal: 0.5;
+  --borderRadius: 0.125rem;
+  --highlight: #306090;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--borderRadius);
+  box-shadow: 0 1rem 1rem -0.75rem var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+textarea,
+input{
+    width: 100%;
+    font-weight: 400;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1.2px solid #c4cae0;
+    margin-top: 5px;
+}
+textarea{
+    resize: none;
+}
+textarea:focus,
+#input:focus{
+    outline: none;
+    border-color: #6f6df4;
+}
+
+input[type="submit"] {
+  color: hsl(var(--bgColorH), var(--bgColorS), var(--bgColorL));
+  background: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-top: 0.625rem;
+  order: 4;
+  outline: 1px dashed transparent;
+  outline-offset: 2px;
+  padding-left: 0;
+  text-transform: uppercase;
+}
+
+input[type="checkbox"]:focus + label span::before,
+input[type="submit"]:focus {
+  outline: 1px dashed hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
+  outline-offset: 2px;
+}
+
+input[type="submit"]:focus {
+  background: hsl(var(--fgColorH), var(--fgColorS), calc(var(--fgColorL) * 0.85));
+}
+
+input[type="submit"]:hover {
+  background: hsl(var(--fgColorH), var(--fgColorS), calc(var(--fgColorL) * 0.85));
+}
+
+input[type="submit"]:active {
+  background: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
+  transition: all 0.125s;
+}
+
+.rate {
+    display: flex;
+flex-direction: row-reverse;
+justify-content: center;
+
+}
+.rate:not(:checked) > input {
+    display:none;
+}
+.rate:not(:checked) > label {
+
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+
+.rate:not(:checked) > label:before {
+    content: '★';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}

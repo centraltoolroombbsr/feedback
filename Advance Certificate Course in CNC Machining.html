@@ -179,57 +179,15 @@ justify-content: center;
                     <label for="subject">Subject</label>
                 </br>
                     <select style="margin-top: 10px; height: 30px; width: 100%;" name="languages" id="lang" required>
-                        <option name="Subject" value="Click here to select">Click here to select</option>
-                        <option name="Subject" value="SAP Business One">SAP Business One</option>
-                        <option name="Subject" value="CREO PARAMETRIC">CREO PARAMETRIC</option>
-                        <option name="Subject" value="Master CAM">Master CAM</option>
-                        <option name="Subject" value="Unigraphics">Unigraphics</option>
-                        <option name="Subject" value="CATIA">CATIA</option>
-                        <option name="Subject" value="VLSI">VLSI</option>
-                        <option name="Subject" value="PLC Programming">PLC Programming</option>
-                        <option name="Subject" value="Embedded System">Embedded System</option>
-                        <option name="Subject" value="MATLAB">MATLAB</option>
-                        <option name="Subject" value="STAAD Pro">STAAD Pro</option>
-                        <option name="Subject" value="ANSYS">ANSYS</option>
-                        <option name="Subject" value="Electrical CAD">Electrical CAD</option>
-                        <option name="Subject" value="SCADA">SCADA</option>
-                        <option name="Subject" value="JAVA">JAVA</option>
-                        <option name="Subject" value="Computer Hardware & Networking">Computer Hardware & Networking</option>
-                        <option name="Subject" value="Solidworks">Solidworks</option>
-                        <option name="Subject" value="3DS Max">3DS Max</option>
-                        <option name="Subject" value="CNC Programming on Lathe">CNC Programming on Lathe</option>
-                        <option name="Subject" value="CNC Machining on Lathe">CNC Machining on Lathe</option>
-                        <option name="Subject" value="CNC Programming on Milling">CNC Programming on Milling</option>
-                        <option name="Subject" value="CNC Machining on Milling">CNC Machining on Milling</option>
-                        <option name="Subject" value="3D Printing">3D Printing</option>
-                        <option name="Subject" value="Revit Architecture">Revit Architecture</option>
-                        <option name="Subject" value="Power Electronics Lab">Power Electronics Lab</option>
-                        <option name="Subject" value="Hydraulic & Pneumaticm">Hydraulic & Pneumatic</option>
-
-                        <option name="Subject" value="Total Station and DGPS">Total Station and DGPS</option>
-                        <option name="Subject" value="Lab View">Lab View</option>
-                        <option name="Subject" value="Personality Development Communication Skills(PDCS)">Personality Development Communication Skills(PDCS)</option>
-                        <option name="Subject" value="C, C++ Programming">C, C++ Programming</option>
-                        <option name="Subject" value="Entrepreneurship Development Program (EDP)">Entrepreneurship Development Program (EDP)</option>
-                        <option name="Subject" value="Industrial Robotics">Industrial Robotics</option>
-                        <option name="Subject" value="Internet of Things (IOT)">Internet of Things (IOT)</option>
-                        <option name="Subject" value="Electrical Machining Lab Practice">Electrical Machining Lab Practice</option>
-                        <option name="Subject" value="Electronics Machining Lab Practices">Electronics Machining Lab Practices</option>
-                        <option name="Subject" value="Server Administration">Server Administration</option>
-                        <option name="Subject" value="Advance Networking">Advance Networking</option>
-                        <option name="Subject" value="Electronics Machining Lab">Electronics Machining Lab</option>
-                        <option name="Subject" value="CNC Turning & Milling">CNC Turning & Milling</option>
-                        <option name="Subject" value="Artificial Intelligence and Machine Learning">Artificial Intelligence and Machine Learning</option>
-                        <option name="Subject" value="Solar.P.V.Technology">Solar.P.V.Technology</option>
-                        <option name="Subject" value="Survey & Material Testing Lab">Survey & Material Testing Lab</option>
-                        <option name="Subject" value="Python Programming">Python Programming</option>
-                        <option name="Subject" value="Cloud Computing">Cloud Computing</option>
-                        <option name="Subject" value="JAVA Framework">JAVA Framework</option>
-                        <option name="Subject" value="DATA Analytics">DATA Analytics</option>
-                        <option name="Subject" value="TRAINING OF TRAINERS">TRAINING OF TRAINERS</option>
-                        <option name="Subject" value="Mechatronics">Mechatronics</option>
-                        <option name="Subject" value="Process Contrl & Automation">Process Contrl & Automation</option>
-                        <option name="Subject" value="Integrated CAD/CAM">Integrated CAD/CAM</option>
+                        <option value="" disabled selected hidden>Please Choose...</option>
+                        <option name="Subject" value="CNC Programmining & CNC Machining">CNC Programmining & CNC Machining</option>
+                        <option name="Subject" value="Engineering Metrology & Quality Assurance">Engineering Metrology & Quality Assurance</option>
+                        <option name="Subject" value="Production Planning & Control">Production Planning & Control</option>
+                        <option name="Subject" value="Total Quality Management">Total Quality Management</option>
+                        <option name="Subject" value="Fundamentals of Metal Cutting Tool">Fundamentals of Metal Cutting Tool</option>
+                        <option name="Subject" value="Entrepreneurship">Entrepreneurship</option>
+                        
+                    
 
                     </select>
                 </div required>
@@ -624,48 +582,8 @@ justify-content: center;
 
             <title>Document</title>
 <p> Time is <span name = "stamp" id="time"> </span></p>
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbz6b7szeTMrjaFj4lIbW_sRZxc40ieu9xv1oVGv0RbNwjIxOoOfTNhD_tiJcZynsbbskg/exec'
-            const form = document.forms['google-sheet']
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                alert("Thank you for your feedback !!");
-                location.reload();
 
-            })
-    function hideButton(x){
-        x.style.display = 'index.html';
-        return false;
-    }
-    function myFunc(){
-        event.preventDefault();
-    }
-`use strict`;
-function refreshTime() {
-  const timeDisplay = document.getElementById("time");
-  const dateString = new Date().toLocaleString();
-  const formattedString = dateString.replace(", ", " - ");
-  timeDisplay.textContent = formattedString;
-}
-  setInterval(refreshTime, 1000);
-
-
-      const btn = document.querySelector("button");
-      const post = document.querySelector(".post");
-      const widget = document.querySelector(".star-widget");
-      const editBtn = document.querySelector(".edit");
-      btn.onclick = ()=>{
-        widget.style.display = "none";
-        post.style.display = "block";
-        editBtn.onclick = ()=>{
-          widget.style.display = "block";
-          post.style.display = "none";
-        }
-        return false;
-      }
-</script>
 </form>
+<script src="cttc.js"></script>
 </body>
 </html>

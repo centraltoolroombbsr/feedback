@@ -181,28 +181,12 @@ justify-content: center;
                                         <select style="margin-top: 10px; height: 30px; width: 100%;" name="languages" id="lang" required>
                         <option value="" disabled selected hidden>Please Choose...</option>
                         <option name="Subject" value="Communicative English">Communicative English</option>
-                        <option name="Subject" value="Engineering Mathematics-1">Engineering Mathematics-1</option>
-                        <option name="Subject" value="Engineering Physics">Engineering Physics</option>
-                        <option name="Subject" value="Engineering Drawing-1">Engineering Drawing-1</option>
-                        <option name="Subject" value="Electrical & Electronics">Electrical & Electronics</option>
-                        <option name="Subject" value="Production Technology-1">Production Technology-1</option>
-                        <option name="Subject" value="Production Technology-2">Production Technology-2</option>
-                        <option name="Subject" value="Engineering Mathematics-2">Engineering Mathematics-1</option>
-                        <option name="Subject" value="Engineering Mathematics-2">Engineering Mathematics-2</option>
-                        <option name="Subject" value="Engineering Drawing-1">Engineering Drawing-1</option>
-                        <option name="Subject" value="Engineering Drawing-2">Engineering Drawing-2</option>
-                        <option name="Subject" value="Material Technology-1">Material Technology-1</option>
-                        <option name="Subject" value="Material Technology-2">Material Technology-2</option>
                         <option name="Subject" value="Engineering Metrology">Engineering Metrology</option>
-                        <option name="Subject" value="Heat Engine">Heat Engine</option>
-                        <option name="Subject" value="Press Tool Theory">Press Tool Theory</option>
-                        <option name="Subject" value="Hydraulics & Pneumatics">Hydraulics & Pneumatics</option>
-                        <option name="Subject" value="Mould Theory">Mould Theory</option>
-                        <option name="Subject" value="Electrical & Electronics-2">Electrical & Electronics-2</option>
-                        <option name="Subject" value="Mould Design">Mould Design</option>
-                        <option name="Subject" value="Jigs & Fixture Theory">Jigs & Fixture Theory</option>
-                        <option name="Subject" value="Strenath of Material">Strenath of Material</option>
-
+                        <option name="Subject" value="Production  Technology">Production  Technology</option>
+                        <option name="Subject" value="CNC Technology">CNC Technology</option>
+                        <option name="Subject" value="Material  Technology">Material  Technology</option>
+                        <option name="Subject" value="Engineering Drawing">Engineering Drawing</option>
+                        
                     </select>
                 </div required>
                  <br>
@@ -576,48 +560,8 @@ justify-content: center;
 
             <title>Document</title>
 <p> Time is <span name = "stamp" id="time"> </span></p>
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbz6b7szeTMrjaFj4lIbW_sRZxc40ieu9xv1oVGv0RbNwjIxOoOfTNhD_tiJcZynsbbskg/exec'
-            const form = document.forms['google-sheet']
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                alert("Thank you for your feedback !!");
-                location.reload();
 
-            })
-    function hideButton(x){
-        x.style.display = 'index.html';
-        return false;
-    }
-    function myFunc(){
-        event.preventDefault();
-    }
-`use strict`;
-function refreshTime() {
-  const timeDisplay = document.getElementById("time");
-  const dateString = new Date().toLocaleString();
-  const formattedString = dateString.replace(", ", " - ");
-  timeDisplay.textContent = formattedString;
-}
-  setInterval(refreshTime, 1000);
-
-
-      const btn = document.querySelector("button");
-      const post = document.querySelector(".post");
-      const widget = document.querySelector(".star-widget");
-      const editBtn = document.querySelector(".edit");
-      btn.onclick = ()=>{
-        widget.style.display = "none";
-        post.style.display = "block";
-        editBtn.onclick = ()=>{
-          widget.style.display = "block";
-          post.style.display = "none";
-        }
-        return false;
-      }
-</script>
 </form>
+<script src="cttc.js"></script>
 </body>
 </html>
