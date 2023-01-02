@@ -155,7 +155,7 @@ justify-content: center;
 </style>
 <body> 
         
-        <form onsubmit="myFunc(); .reset();" name="google-sheet" class="row" method="POST" (ngSubmit)="onSubmit(userForm.value)" >
+        <form onchange="if(this.options[this.selectedIndex].value=='customOption'){toggleField(this,this.nextSibling); this.selectedIndex='0';}" onsubmit="myFunc(); .reset();" name="google-sheet" class="row" method="POST" (ngSubmit)="onSubmit(userForm.value)" >
             <div>
             <center>
         <div class="cttc"><b>
@@ -175,27 +175,37 @@ justify-content: center;
                     <input type="email" name="Email" id="email" placeholder="Your email here" required>
                 </div>
                  <br>
+                  <div class="column">
+                    <label for="Course">Course</label>
+                     </br>
+                    <select style="margin-top: 10px; height: 30px; width: 100%;" name="Course" id="Course" required>
+                        <option  value="Advance Certificate Course in Machine Maintenance">Advance Certificate Course in Machine Maintenance</option>
+                    </select>
+                </div>
+                 <br>
                 <div class="column">
                     <label for="subject">Subject</label>
                 </br>
-                                        <select style="margin-top: 10px; height: 30px; width: 100%;" name="languages" id="lang" required>
+                    <select style="margin-top: 10px; height: 30px; width: 100%;" name="Subject" id="Subject" required>
                         <option value="" disabled selected hidden>Please Choose...</option>
-                        <option name="Subject" value="Conventional Milling">Conventional Milling</option>
-                       <option name="Subject" value="Conventional Turning">Conventional Turning</option>
-                       <option name="Subject" value="Fitting & Bench Work">Fitting & Bench Work</option>
-                       <option name="Subject" value="Computer Fundamental & AutoCAD">Computer Fundamental & AutoCAD</option>
-                       <option name="Subject" value="Basic Electrical & Transmission Control">Basic Electrical & Transmission Control</option>
-                       <option name="Subject" value="Preventive & Breakdown Maintenance">Preventive & Breakdown Maintenance</option>
-                       <option name="Subject" value="DG Set">DG Set</option>
-                       <option name="Subject" value="UPS">UPS</option>
-                       <option name="Subject" value="PLC">PLC</option>
-                       <option name="Subject" value="CNC Maintenance">CNC Maintenance</option>
-                    </select>
+                        <option  value="Conventional Milling">Conventional Milling</option>
+                        <option  value="Conventional Turning">Conventional Turning</option>
+                        <option  value="Fitting & Bench Work">Fitting & Bench Work</option>
+                        <option  value="Computer Fundamental & AutoCAD">Computer Fundamental & AutoCAD</option>
+                        <option  value="Basic Electrical & Transmission Control">Basic Electrical & Transmission Control</option>
+                        <option value="Preventive & Breakdown Maintenance">Preventive & Breakdown Maintenance</option>
+                        <option value="DG Set">DG Set</option>
+                        <option value="UPS">UPS</option>
+                        <option value="PLC">PLC</option>
+                        <option value="CNC Maintenance">CNC Maintenance</option>
+                        
+                    </select> 
+                        
                 </div required>
                  <br>
                 <div class="column">
-                    <label for="subject">Subject Code</label>
-                    <input type="text" name="Subject" id="subject" placeholder="Your subject here" required>
+                    <label for="Subject code">Subject Code</label>
+                    <input type="text" name="Subject code" id="Subject code" placeholder="Your subject here" required>
                 </div>
                  <br>
                 <div class="column">
@@ -204,19 +214,15 @@ justify-content: center;
                 </div>
                  <br>
                 <div class="column">
-                    <label for="subject">Venue</label>
+                    <label for="venue">Venue</label>
                     <input type="text" name="Venue" id="venue" placeholder="Your venue here" required>
                 </div>
                  <br>
+               
                 <div class="column">
-                    <label for="subject">Course</label>
-                    <input type="text" name="Course" id="venue" placeholder="Your course here" required>
-                </div>
-                 <br>
-                <div class="column">
-                    <label for="subject">Name of the Faculty</label>
-                    </br>
-                    <input type="text" name="Name of the Faculty" id="venue" placeholder="Your course here" required>
+                    <label for="Name of the Faculty">Name of the Faculty</label>
+                   <input type="text" name="Name of the Faculty" id="Name of the Faculty" placeholder="Your faculty name here" required>
+                       
                 </div>
                  <br>
                 <div class="column">
@@ -406,7 +412,7 @@ justify-content: center;
 
             <br>
             <div class="cttc">
-                <h9>10. How do you rate the assistance provided during your training ?</h9>
+                <h9>10. How do you rate the assistance provided during your training</h9>
                 <div class="rate">
                     <input type="radio" id="star100" name="rate10" value="10" required/><label for="star100" title="text">10 stars</label>
                     <input type="radio" id="star99" name="rate10" value="9" required/><label for="star99" title="text">9 stars</label>
@@ -424,7 +430,7 @@ justify-content: center;
 
             <br>
             <div class="cttc">
-                <h9>11. How effective was the consultation provided ?</h9>
+                <h9>11. How effective was the consultation provided?</h9>
                 <div class="rate">
                     <input type="radio" id="star110" name="rate11" value="10" required/><label for="star110" title="text">10 stars</label>
                     <input type="radio" id="star109" name="rate11" value="9" required/><label for="star109" title="text">9 stars</label>
@@ -442,7 +448,7 @@ justify-content: center;
 
             <br>
             <div class="cttc">
-                <h9>12. How well were the stated objectives of the module achieved ?</h9>
+                <h9>12. How well were the stated objectives of the module achieved?</h9>
                 <div class="rate">
                     <input type="radio" id="star120" name="rate12" value="10" required/><label for="star120" title="text">10 stars</label>
                     <input type="radio" id="star119" name="rate12" value="9" required/><label for="star119" title="text">9 stars</label>
@@ -563,8 +569,72 @@ justify-content: center;
 
             <title>Document</title>
 <p> Time is <span name = "stamp" id="time"> </span></p>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz6b7szeTMrjaFj4lIbW_sRZxc40ieu9xv1oVGv0RbNwjIxOoOfTNhD_tiJcZynsbbskg/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                alert("thank you for your feedback !!");
+                location.reload();
 
+            })
+    function hideButton(x){
+        x.style.display = 'index.html';
+        return false;
+    }
+    
+ 
+`use strict`;
+function refreshTime() {
+  const timeDisplay = document.getElementById("time");
+  const dateString = new Date().toLocaleString();
+  const formattedString = dateString.replace(", ", " - ");
+  timeDisplay.textContent = formattedString;
+}
+  setInterval(refreshTime, 1000);
+
+  function DropDownChanged(oDDL) {
+    var oTextbox = oDDL.form.elements["Subject"];
+    if (oTextbox) {
+        oTextbox.style.display = (oDDL.value == "") ? "" : "none";
+        if (oDDL.value == "")
+            oTextbox.focus();
+    }
+}
+
+function FormSubmit(oForm) {
+    var oHidden = oForm.elements["fruit"];
+    var oDDL = oForm.elements["fruit_ddl"];
+    var oTextbox = oForm.elements["Subject"];
+    if (oHidden && oDDL && oTextbox)
+        oHidden.value = (oDDL.value == "") ? oTextbox.value : oDDL.value;
+}
+
+
+      const btn = document.querySelector("button");
+      const post = document.querySelector(".post");
+      const widget = document.querySelector(".star-widget");
+      const editBtn = document.querySelector(".edit");
+      btn.onclick = ()=>{
+        widget.style.display = "none";
+        post.style.display = "block";
+        editBtn.onclick = ()=>{
+          widget.style.display = "block";
+          post.style.display = "none";
+        }
+        return false;
+      }
+
+      function toggleField(hideObj,showObj){
+        hideObj.disabled=true;        
+        hideObj.style.display='none';
+        showObj.disabled=false;   
+        showObj.style.display='inline';
+        showObj.focus();
+}
+</script>
 </form>
-<script src="cttc.js"></script>
 </body>
 </html>
