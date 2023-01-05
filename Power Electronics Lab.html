@@ -73,9 +73,7 @@ input{
     border: 1.2px solid #c4cae0;
     margin-top: 5px;
 }
-textarea{
-    resize: none;
-}
+
 textarea:focus,
 #input:focus{
     outline: none;
@@ -182,16 +180,7 @@ justify-content: center;
                         <option  value="Power Electronics Lab">Power Electronics Lab</option>
                     </select>
                 </div>
-                 <br>
-                <div class="column">
-                    <label for="subject">Subject</label>
-                </br>
-                    <select style="margin-top: 10px; height: 30px; width: 100%;" name="Subject" id="Subject" required>
-                        <option value="" disabled selected hidden>Please Choose...</option>
-                        <option  value="Power Electronics Lab">Power Electronics Lab</option>
-                    </select> 
-                        
-                </div required>
+                 
                  <br>
                 <div class="column">
                     <label for="Subject code">Subject Code</label>
@@ -543,7 +532,7 @@ justify-content: center;
 
                     <b><label for="name">Comments</label></b></br>
                     <h10>Ex. Any other like as Ass. faculties ,etc. </h10>
-                    <input type="text" name="Comments" id="Comments" placeholder="Your comments here">
+                    <textarea type="text" name="Comments" id="Comments" placeholder="Your comments here"></textarea>
                 </div>
 
           <br><br></br>

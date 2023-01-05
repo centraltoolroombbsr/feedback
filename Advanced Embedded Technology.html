@@ -73,9 +73,7 @@ input{
     border: 1.2px solid #c4cae0;
     margin-top: 5px;
 }
-textarea{
-    resize: none;
-}
+
 textarea:focus,
 #input:focus{
     outline: none;
@@ -558,8 +556,7 @@ justify-content: center;
             <div>
                 <br><br>
                 <center>
-            <a href="#"><input class="button" [disabled]="userForm.in" onclick="disabled" type="submit" value="Submit"></input></a>
-                </center>
+            <textarea type="text" name="Comments" id="Comments" placeholder="Your comments here"></textarea>
             </div>
 
             <br><br></br>
